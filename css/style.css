@@ -7,14 +7,13 @@
 
 /* 3. Font size should be twice the normal size  */
 
+h1, h2 {
+	text-align: center;
+	margin:10px;
+	font-size:200%
+  }
 
-
-
-
-
-
-
-  /******* style the grid container  *******/
+    /******* style the grid container  *******/
 
   /* 1. Give it a width of 800px */
 
@@ -24,7 +23,7 @@
 
   /* 4. Give it 3 columns of equal size (1fr each) */
 
-  /* 5. Set a g rid gap of 10px */
+  /* 5. Set a grid gap of 10px */
 
   /* 6. Add a background color of #91f321 */
 
@@ -34,12 +33,18 @@
 
   /* 9. Round the corners */
 
-
-
-
-
-
-
+  .grid {
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 10px;
+    background-color: #91f321;
+    background-image:url("../images/background.jpg");
+    border: 3px solid black;
+    border-radius: 40px;
+	justify-content: space-around;
+  }
 
 
 
@@ -55,7 +60,13 @@
 
 /* 5. Set a font-size of 30px   */
 
-
+.grid div {
+	border: 5px solid white;
+	background-color: rgba(231, 157, 224, 0.5);
+	text-align: center;
+	padding: 20px;
+	font-size: 30px;
+}
 
 
 
@@ -68,4 +79,41 @@
 
 
 /* Now try and style the individual boxes using grid-column  to match the picture at 1200px.*/
+
+.item2, .item5{
+	grid-column-start: 3;
+}
+
+.item3{
+	grid-column-start: 2;
+}
+
+.item4{
+	grid-column-start: 1;
+}
+
+
+.item_a{
+	grid-column-start: 3;
+	grid-row-start: 3;
+
+}
+.item_b{
+	grid-column-start: 3;
+
+}
+.item_c{
+	grid-column-start: 1;
+    grid-row-start: 2;
+
+}
+.item_d{
+	grid-column-start: 2;
+    grid-row-start: 2;
+
+}
+.item_e{
+	grid-column-start: 3;
+    grid-row-start: 2;
+}
 
